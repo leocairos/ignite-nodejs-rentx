@@ -3,17 +3,17 @@
 </h1>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/leocairos/ignite-reactjs-chapter-ii-dtmoney?color=%2304D361">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/leocairos/ignite-nodejs-typescript?color=%2304D361">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/leocairos/ignite-reactjs-chapter-ii-dtmoney">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/leocairos/ignite-nodejs-typescript">
 
-  <a href="https://github.com//leocairos/ignite-reactjs-chapter-ii-dtmoney/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/leocairos/ignite-reactjs-chapter-ii-dtmoney">
+  <a href="https://github.com//leocairos/ignite-nodejs-typescript/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/leocairos/ignite-nodejs-typescript">
   </a>
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
-   <a href="https://github.com/leocairos/ignite-reactjs-chapter-ii-dtmoney/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/leocairos/ignite-reactjs-chapter-ii-dtmoney?style=social">
+   <a href="https://github.com/leocairos/ignite-nodejs-typescript/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/leocairos/ignite-nodejs-typescript?style=social">
   </a>
 
   <a href="https://www.linkedin.com/in/leonardo-sampaio-cairo-54a74756/">
@@ -27,6 +27,7 @@ O Ignite é um programa de aceleração para devs desenvolvido pela [Rocketseat]
 
 
 ## 💻 Sobre o ...
+
 
 ## Project Initialize/Configuration
 
