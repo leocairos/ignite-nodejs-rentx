@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Ignite NodeJS" title="Ignite NodeJS" src="./.github/Capa.png" />
+    <img alt="Ignite NodeJS" title="Ignite NodeJS" src="./.github/ignite.png" />
 </h1>
 
 <p align="center">
@@ -103,14 +103,23 @@ O Ignite é um programa de aceleração para devs desenvolvido pela [Rocketseat]
   ```
 
 **1 - How would you like do use Eslint?** `To check syntax, find problems and enforce code style`
+
 **2 - What type of modules does your project use?** `Javascript modules (import/export)`
+
 **3 - Which framework does your project use?** `None of these`
+
 **4 - Does your project use TypeScript?** `Yes`
+
 **5 - Where does your code run?** tecla `Espaço` para desmarcar o **Browser** e selecionarmos a opção `Node`
+
 **6 - How would you like to define a style for your project?** `Use a popular style guide`
+
 **7 - Which style guide do you want to follow?** `Airbnb`
+
 **8 - What format do you want your config file to be in?** `JSON`
+
 **9 - Would you like to install them now with npm?** `No`
+
 
 ```bash
 Checking peerDependencies of eslint-config-airbnb@latest
