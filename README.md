@@ -28,6 +28,11 @@ O Ignite é um programa de aceleração para devs desenvolvido pela [Rocketseat]
 
 ## 💻 Sobre o ...
 
+### Diagrama de entidades e relaciomanentos do projeto
+
+<h1 align="center">
+    <img alt="Diagrama" title="Diagrama" src="./.github/diagrama.png" />
+</h1>
 
 ## Project Initialize/Configuration
 
@@ -256,6 +261,33 @@ yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
 Para finalizar e aplicar todas as mudanças vamos fechar o VS Code e reabrir na **pasta raiz** do projeto, pois senão o **ESLint** não vai reconhecer as dependências instaladas e aplicar as regras de Linting.
 
 Feito isso, para verificar se está realmente funcionando basta reabrir qualquer arquivo do projeto e tentar errar algo no código para que ele mostre o erro e formate automaticamente quando o arquivo for salvo.
+
+## Debug instructions
+
+* Na barra de menus na lateral esquerda do vscode clicar no icone de debug
+* Clicar em "create a launch.json file"
+* escolhe node
+* editar launch.json
+  ```JSON
+  {
+      // Use IntelliSense to learn about possible attributes.
+      // Hover to view descriptions of existing attributes.
+      // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+      "version": "0.2.0",
+      "configurations": [
+          {
+              "type": "node",
+              "request": "attach",
+              "name": "Launch Program",
+              "skipFiles": ["<node_internals>/**"],
+              "outFiles": ["${workspaceFolder}/**/*.js"]
+          }
+      ]
+  }
+  ```
+* Editar scrip de inicialização (package.json) com o paramentro --inspect
+
+
 
 
 ## 📝 Licença
