@@ -288,7 +288,17 @@ Feito isso, para verificar se está realmente funcionando basta reabrir qualquer
 * Editar scrip de inicialização (package.json) com o paramentro --inspect
 
 
+## Documentando a API - by [SWAGGER](https://swagger.io/)
 
+* Install swagger-ui-express
+
+* Adjust tsconfig.json
+  ```json
+    ...
+    "resolveJsonModule": true
+  ```
+
+* run project and open API Doc in http://[addressServer]:[portServer]/[api-doc-route-path] (ex: http://localhost:3333/api-docs)
 
 ## 📝 Licença
 
