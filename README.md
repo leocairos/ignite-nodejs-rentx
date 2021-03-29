@@ -26,7 +26,21 @@
 O Ignite é um programa de aceleração para devs desenvolvido pela [Rocketseat](https://rocketseat.com.br/).
 
 
-## 💻 Sobre o ...
+## 💻 Sobre o Rentx
+
+Trata-se de uma API para locadara de veiculos.
+
+### Execute
+
+```bash
+  git clone
+  cd ignite-nodejs-rentx
+  yarn
+  yarn dev
+```
+
+API documentation available in http://[addressServer]:[portServer]/[api-doc-route-path] (ex: http://localhost:3333/api-docs)
+
 
 ### Diagrama de entidades e relaciomanentos do projeto
 
