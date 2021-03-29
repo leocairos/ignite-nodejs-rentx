@@ -346,7 +346,7 @@ Feito isso, para verificar se está realmente funcionando basta reabrir qualquer
   * Stop container: docker-compose stop
   * Remover container: docker-compose down
 
-
+##
 
 ## 📝 Licença
 
