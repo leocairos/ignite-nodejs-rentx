@@ -35,8 +35,19 @@ Trata-se de uma API para locadara de veiculos.
 ```bash
   git clone
   cd ignite-nodejs-rentx
+```
+
+* without docker
+```bash
   yarn
+  yarn typeorm migrations:run
   yarn dev
+```
+
+* with docker
+```bash
+  docker-compose up -d
+  yarn typeorm migrations:run
 ```
 
 API documentation available in http://[addressServer]:[portServer]/[api-doc-route-path] (ex: http://localhost:3333/api-docs)
@@ -352,15 +363,64 @@ Feito isso, para verificar se está realmente funcionando basta reabrir qualquer
 * View app logs in docker: docker logs ID-CONTAINER
 * View app logs in docker real time: docker logs ID-CONTAINER -f
 * Open container in Bash: docker exec -it ID-CONTAINER /bin/bash
+* View IP Container: docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' CONTAINER-NAME
+* View IP Container Op 2: docker exec CONTAINER-NAME cat /etc/hosts
 
 * Commands by docker-compose.yml file:
   * Create and run app: docker-compose up
+  * Force re Create and run app: docker-compose up --force-recreate
   * Create and run app in background mode: docker-compose up -d
   * Run app only: docker-compose start
   * Stop container: docker-compose stop
   * Remover container: docker-compose down
 
-##
+
+## typeorm
+
+* install packages:
+  * yarn add typeorm reflect-metada pg
+
+* update tsconfig
+  ```json
+  /* Experimental Options */
+  "experimentalDecorators": true,
+  "emitDecoratorMetadata": true,
+  ```
+
+### Database management
+
+* [Beekeeper Studio](https://www.beekeeperstudio.io/)
+
+### Migrations
+
+* update package.json script (add):
+```json
+  "typeorm": "ts-node-dev ./node_modules/typeorm/cli"
+```
+
+* update ormconfig.json
+```json
+  "migrations": ["./src/database/migrations/*.ts"],
+  "entities": ["./src/modules/**/entities/*.ts"],
+  "cli": {
+    "migrationsDir": "./src/database/migrations"
+  }
+```
+
+* Create migrations file
+```bash
+yarn typeorm migrations:create -n CreateCategories
+```
+
+* Execute migrations
+```bash
+yarn typeorm migration:run
+```
+
+* Revert migrations
+```bash
+yarn typeorm migration:revert
+```
 
 ## 📝 Licença
 
