@@ -8,7 +8,13 @@ const app = express();
 
 app.use(express.json());
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
+const options = {
+  customCss: '.swagger-ui .topbar { display: none }',
+  customSiteTitle: 'RentalX API',
+  // customfavIcon: '/assets/favicon.ico',
+};
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile, options));
 
 app.use(router);
 

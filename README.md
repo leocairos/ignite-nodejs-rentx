@@ -300,6 +300,54 @@ Feito isso, para verificar se está realmente funcionando basta reabrir qualquer
 
 * run project and open API Doc in http://[addressServer]:[portServer]/[api-doc-route-path] (ex: http://localhost:3333/api-docs)
 
+
+## Docker
+
+* Install docker: Instruction in (https://www.notion.so/Docker-e-Docker-Compose-16771f2ceefe4a05a8c29df4ca49e97a)
+* Install Docker Plugin for vscode
+* Create Dockerfile file in root path project
+* Create .dockerignore file in root path project
+
+* Build a docker image file (run in root path project)
+  ```bash
+  docker build -t rentx .
+  ```
+
+* List Docker Containers command: $ docker ps
+
+* Run Docker Container
+  ```bash
+  docker run -p 3333:3333 rentx
+  ```
+
+* Open container in Bash: $ docker exec -it 16b7ec28f7b0 /bin/bash
+
+* DOCKER COMPOSE
+  * Create a docker-compose.yml file
+  * run compose: $ docker-compose up (with -d to background run)
+  * Logs: $ docker logs rentx
+  * Added --poll parameter in package.json script
+
+### Docker Commands
+
+* List containers running: docker ps
+* List all containers running/stoppeds: docker ps -a
+* Remove container: docket rm ID-CONTAINER
+* Start container: docker start ID-CONTAINER
+* Stop container: docker stop ID-CONTAINER
+* View app logs in docker: docker logs ID-CONTAINER
+* View app logs in docker real time: docker logs ID-CONTAINER -f
+* Open container in Bash: docker exec -it ID-CONTAINER /bin/bash
+
+* Commands by docker-compose.yml file:
+  * Create and run app: docker-compose up
+  * Create and run app in background mode: docker-compose up -d
+  * Run app only: docker-compose start
+  * Stop container: docker-compose stop
+  * Remover container: docker-compose down
+
+
+
 ## 📝 Licença
 
 Este projeto esta sob a licença MIT.
