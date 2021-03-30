@@ -33,22 +33,22 @@ Trata-se de uma API para locadara de veiculos.
 ### Execute
 
 ```bash
-  git clone
-  cd ignite-nodejs-rentx
+git clone
+ cd ignite-nodejs-rentx
 ```
 
 * without docker
-```bash
+  ```bash
   yarn
   yarn typeorm migrations:run
   yarn dev
-```
+  ```
 
 * with docker
-```bash
+  ```bash
   docker-compose up -d
   yarn typeorm migrations:run
-```
+  ```
 
 API documentation available in http://[addressServer]:[portServer]/[api-doc-route-path] (ex: http://localhost:3333/api-docs)
 
@@ -421,6 +421,19 @@ yarn typeorm migration:run
 ```bash
 yarn typeorm migration:revert
 ```
+## [TSyringe](https://github.com/Microsoft/tsyringe) - Dependence Injection
+
+* Map in shared/container (container.register)
+* Load in server (import './shared/container'; )
+* Inject in UseCase (@inject and @injectable)
+* Resolve in Controller (container.resolve)
+
+## Some solutions for possibles problems
+
+* Error: /usr/app/node_modules/bcrypt/lib/binding/napi-v3/bcrypt_lib.node: invalid ELF header
+  * Com o bcrypt, acesse a maquina: docker exec -it rentx /bin/bash
+  * e rode um yarn la dentro
+  * Ou use o bcryptjs no lugar do bcrypt
 
 ## 📝 Licença
 
