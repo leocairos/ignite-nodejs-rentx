@@ -19,6 +19,9 @@ class User {
   isAdmin: boolean;
 
   @Column()
+  avatar: string;
+
+  @Column()
   driver_license: string;
 
   @CreateDateColumn()

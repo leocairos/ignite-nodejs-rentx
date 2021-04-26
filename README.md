@@ -434,6 +434,10 @@ yarn typeorm migration:revert
   * Com o bcrypt, acesse a maquina: docker exec -it rentx /bin/bash
   * e rode um yarn la dentro
   * Ou use o bcryptjs no lugar do bcrypt
+* AppError not execute
+  * install and import express-async-errors before express in server.js
+* Sobrescrever tipagem: criar pasta @types/biblioteca com a nova definição
+  * @types/express/index.d.ts
 
 ## 📝 Licença
 
