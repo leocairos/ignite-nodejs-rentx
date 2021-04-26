@@ -439,6 +439,22 @@ yarn typeorm migration:revert
 * Sobrescrever tipagem: criar pasta @types/biblioteca com a nova definição
   * @types/express/index.d.ts
 
+## Requisitos
+
+  **RF** => Requisitos Funcionais
+  **RNF** => Requisitos Não Funcionais
+  **RN** => Requisitos de Negócio
+
+### Cadastro de carros
+
+  **RF**
+  [ ] Deve ser possivel cadastrar um novo veiculo
+
+  **RN** => Requisitos de Negócio
+  [ ] Não deve ser possível cadastrar um veiculo com uma placa ja existente
+  [ ] Não deve ser possível alterar a placa de um veiculo já cadastrado
+
+
 ## 📝 Licença
 
 Este projeto esta sob a licença MIT.
