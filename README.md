@@ -441,19 +441,17 @@ yarn typeorm migration:revert
 
 ## Requisitos
 
-- **RF** => Requisitos Funcionais
-- **RNF** => Requisitos Não Funcionais
-- **RN** => Requisitos de Negócio
+Requisitos Funcionais (**RF**), Requisitos Não Funcionais (**RNF**) e Requisitos de Negócio (**RN**).
 
 ### Cadastro de carros
 
-**RF**
-- [ ] Deve ser possivel cadastrar um novo veiculo
+- **RNF**
+  - [ ] Deve ser possivel cadastrar um novo veiculo
 
-**RN** => Requisitos de Negócio
-- [ ] Não deve ser possível cadastrar um veiculo com uma placa ja existente
-- [ ] Não deve ser possível alterar a placa de um veiculo já cadastrado
-- [ ] O carro deve ser cadastro como "disponivel" por padrão
+- **RN**
+  - [ ] Não deve ser possível cadastrar um veiculo com uma placa ja existente
+  - [ ] Não deve ser possível alterar a placa de um veiculo já cadastrado
+  - [ ] O carro deve ser cadastro como "disponivel" por padrão
 
 
 ## 📝 Licença
