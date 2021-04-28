@@ -452,7 +452,9 @@ Requisitos Funcionais (**RF**), Requisitos Não Funcionais (**RNF**) e Requisito
   - [ ] Não deve ser possível cadastrar um veiculo com uma placa ja existente
   - [ ] Não deve ser possível alterar a placa de um veiculo já cadastrado
   - [ ] O carro deve ser cadastro como "disponivel" por padrão
+  - [ ] O usuário responsavel pelo cadastro deve ser um administrador
 
+...
 
 ## 📝 Licença
 
