@@ -12,6 +12,10 @@
 /build
 /dist
 
+# images test
+/tmp/avatar/
+/tmp/cars/
+
 # misc
 .DS_Store
 .env.local
