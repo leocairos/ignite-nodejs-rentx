@@ -456,6 +456,12 @@ Requisitos Funcionais (**RF**), Requisitos Não Funcionais (**RNF**) e Requisito
 
 ...
 
+## TDD Project Development Strategy
+
+Requirements (RF|RNF|RN) >> Entity >> IRepository >> RepositoryInMemory
+  '>> Spec(test) Fail >> UseCase >> Spec(test) Success
+  '>> Migration >> Entity(ORM Maped) >> Controller >> Route >> UseCase (Injection)
+
 ## 📝 Licença
 
 Este projeto esta sob a licença MIT.
