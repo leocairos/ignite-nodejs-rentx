@@ -6,28 +6,14 @@ export class CreateCarImages1619817891520 implements MigrationInterface {
       new Table({
         name: 'cars_image',
         columns: [
-          {
-            name: 'id',
-            type: 'uuid',
-            isPrimary: true,
-          },
-          {
-            name: 'car_id',
-            type: 'uuid',
-          },
-          {
-            name: 'image_name',
-            type: 'varchar',
-          },
-          {
-            name: 'created_at',
-            type: 'timestamp',
-            default: 'now()',
-          },
+          { name: 'id', type: 'uuid', isPrimary: true },
+          { name: 'car_id', type: 'uuid' },
+          { name: 'image_name', type: 'varchar' },
+          { name: 'created_at', type: 'timestamp', default: 'now()' },
         ],
         foreignKeys: [
           {
-            name: 'FKCaImage',
+            name: 'FKCarImage',
             referencedTableName: 'cars',
             referencedColumnNames: ['id'],
             columnNames: ['car_id'],

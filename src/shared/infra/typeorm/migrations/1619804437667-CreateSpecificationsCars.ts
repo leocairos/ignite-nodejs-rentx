@@ -12,19 +12,9 @@ export class CreateSpecificationsCars1619804437667
       new Table({
         name: 'specifications_cars',
         columns: [
-          {
-            name: 'car_id',
-            type: 'uuid',
-          },
-          {
-            name: 'specification_id',
-            type: 'uuid',
-          },
-          {
-            name: 'created_at',
-            type: 'timestamp',
-            default: 'now()',
-          },
+          { name: 'car_id', type: 'uuid' },
+          { name: 'specification_id', type: 'uuid' },
+          { name: 'created_at', type: 'timestamp', default: 'now()' },
         ],
       }),
     );

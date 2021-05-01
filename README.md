@@ -462,6 +462,21 @@ Requirements (RF|RNF|RN) >> Entity >> IRepository >> RepositoryInMemory
   '>> Spec(test) Fail >> UseCase >> Spec(test) Success
   '>> Migration >> Entity(ORM Maped) >> Controller >> Route >> UseCase (Injection)
 
+**Rental**
+
+* modules >> rentals
+  - useCases
+    - createRental
+      - CreateRentalUseCase.ts
+      - CreateRentalUseCase.spec.tes
+  - repositories
+  - infra >> typeorm
+    - entities
+    - repositories
+
+1. CreateRentalUseCase.ts (basic struct)
+2. CreateRentalUseCase.spec.ts (basic struct)
+
 ## 📝 Licença
 
 Este projeto esta sob a licença MIT.
