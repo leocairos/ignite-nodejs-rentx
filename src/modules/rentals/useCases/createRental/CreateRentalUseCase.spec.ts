@@ -34,7 +34,7 @@ describe('Create Rental', () => {
   });
 
   it('should NOT be able to create a new rental if there is another open to the same user', async () => {
-    expect(async () => {
+    await expect(async () => {
       await createRentalUseCase.execute({
         user_id: 'sameUser',
         car_id: 'carId01',
@@ -50,7 +50,7 @@ describe('Create Rental', () => {
   });
 
   it('should NOT be able to create a new rental if there is another open to the same car', async () => {
-    expect(async () => {
+    await expect(async () => {
       await createRentalUseCase.execute({
         user_id: 'userId',
         car_id: 'sameCar',
@@ -66,7 +66,7 @@ describe('Create Rental', () => {
   });
 
   it('should NOT be able to create a new rental with invalid return time', async () => {
-    expect(async () => {
+    await expect(async () => {
       await createRentalUseCase.execute({
         user_id: 'userId',
         car_id: 'sameCar',

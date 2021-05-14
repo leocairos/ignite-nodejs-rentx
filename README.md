@@ -16,7 +16,7 @@
     <img alt="Stargazers" src="https://img.shields.io/github/stars/leocairos/ignite-nodejs-typescript?style=social">
   </a>
 
-  <a href="https://www.linkedin.com/in/leonardo-sampaio-cairo-54a74756/">
+  <a href="https://www.linkedin.com/in/leonardo-cairo-54a74756/">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin&labelColor=blue">
   </a>
 </p>
@@ -481,4 +481,4 @@ Requirements (RF|RNF|RN) >> Entity >> IRepository >> RepositoryInMemory
 
 Este projeto esta sob a licença MIT.
 
-Feito com ❤️ por [Leonardo Cairo](https://www.linkedin.com/in/leonardo-sampaio-cairo-54a74756/)!
+Feito com ❤️ por [Leonardo Cairo](https://www.linkedin.com/in/leonardo-cairo-54a74756/)!

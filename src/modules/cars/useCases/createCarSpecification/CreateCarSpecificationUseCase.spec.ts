@@ -19,7 +19,7 @@ describe('Create Car Specification', () => {
   });
 
   it('should not be able to add a new specification to an non-existent car', async () => {
-    expect(async () => {
+    await expect(async () => {
       const car_id = 'idCar';
       const specifications_id = ['oneSpecification'];
       await createCarSpecificationUseCase.execute({
