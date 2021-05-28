@@ -1,19 +1,19 @@
-import { CarsRespositoryInMemory } from '@modules/cars/repositories/in-memory/CarsRepositoryInMemory';
+import { CarsRepositoryInMemory } from '@modules/cars/repositories/in-memory/CarsRepositoryInMemory';
 import { SpecificationsRepositoryInMemory } from '@modules/cars/repositories/in-memory/SpecificationsRepositoryInMemory';
 import { AppError } from '@shared/errors/AppError';
 
 import { CreateCarSpecificationUseCase } from './CreateCarSpecificationUseCase';
 
 let createCarSpecificationUseCase: CreateCarSpecificationUseCase;
-let carsRespositoryInMemory: CarsRespositoryInMemory;
+let carsRepositoryInMemory: CarsRepositoryInMemory;
 let specificationsRepositoryInMemory: SpecificationsRepositoryInMemory;
 
 describe('Create Car Specification', () => {
   beforeEach(() => {
-    carsRespositoryInMemory = new CarsRespositoryInMemory();
+    carsRepositoryInMemory = new CarsRepositoryInMemory();
     specificationsRepositoryInMemory = new SpecificationsRepositoryInMemory();
     createCarSpecificationUseCase = new CreateCarSpecificationUseCase(
-      carsRespositoryInMemory,
+      carsRepositoryInMemory,
       specificationsRepositoryInMemory,
     );
   });
@@ -30,7 +30,7 @@ describe('Create Car Specification', () => {
   });
 
   it('should be able to add a new specification on the car', async () => {
-    const car = await carsRespositoryInMemory.create({
+    const car = await carsRepositoryInMemory.create({
       name: 'Name car available',
       description: 'Description car',
       daily_rate: 100,
