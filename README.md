@@ -482,3 +482,9 @@ Requirements (RF|RNF|RN) >> Entity >> IRepository >> RepositoryInMemory
 Este projeto esta sob a licença MIT.
 
 Feito com ❤️ por [Leonardo Cairo](https://www.linkedin.com/in/leonardo-cairo-54a74756/)!
+
+**to watch**
+  - [ ] Chapter V - Class 1 - Correçao dos Testes 09min26s
+
+**to fix**
+  - [ ] Test controller with envTest
