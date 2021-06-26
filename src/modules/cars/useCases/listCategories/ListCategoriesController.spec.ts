@@ -10,8 +10,8 @@ let connection: Connection;
 
 describe('List Category Controller', () => {
   beforeAll(async () => {
-    // connection = await createConnection('localhost', true);
-    connection = await createConnection('localhost');
+    connection = await createConnection('localhost', true);
+    // connection = await createConnection('localhost');
 
     await connection.runMigrations();
 
