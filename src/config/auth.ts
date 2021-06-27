@@ -4,4 +4,5 @@ export default {
   secret_refresh_token: '47d35b479ca4a96c8e00da23af67fd74',
   expires_in_refresh_token: '30d',
   expires_refresh_token_days: 30,
+  expires_token_forgot_password_hours: 3,
 };
