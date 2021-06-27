@@ -10,7 +10,7 @@ let connection: Connection;
 
 describe('List Category Controller', () => {
   beforeAll(async () => {
-    connection = await createConnection('localhost', true);
+    connection = await createConnection(true);
     // connection = await createConnection('localhost');
 
     await connection.runMigrations();
@@ -34,7 +34,7 @@ describe('List Category Controller', () => {
       .post('/sessions')
       .send({ email: 'admin@mail.com', password: 'admin' });
 
-    const { token } = responseToken.body;
+    const { refresh_token } = responseToken.body;
 
     await request(app)
       .post('/categories')
@@ -43,7 +43,7 @@ describe('List Category Controller', () => {
         description: 'Category Created by Supertest',
       })
       .set({
-        Authorization: `Bear ${token}`,
+        Authorization: `Bear ${refresh_token}`,
       });
     const response = await request(app).get('/categories');
 
