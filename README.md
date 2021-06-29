@@ -484,7 +484,7 @@ Este projeto esta sob a licença MIT.
 Feito com ❤️ por [Leonardo Cairo](https://www.linkedin.com/in/leonardo-cairo-54a74756/)!
 
 **to watch**
-  - [x] Chapter V - Class 1 - Correçao dos Testes 09min26s
+  - [ ] Chapter
 
 **to fix**
-  - [X] Test controller with envTest
+  - [ ] ...
