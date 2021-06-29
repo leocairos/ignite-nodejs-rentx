@@ -16,9 +16,9 @@ class SendForgotPasswordMailUseCase {
     private usersRepository: IUsersRepository,
     @inject('UsersTokensRepository')
     private usersTokensRepository: IUsersTokensRepository,
-    @inject('DayjsDateProvider')
+    @inject('DateProvider')
     private dateProvider: IDateProvider,
-    @inject('EtherealMailProvider')
+    @inject('MailProvider')
     private mailProvider: IMailProvider,
   ) {}
   async execute(email: string): Promise<void> {
@@ -47,7 +47,7 @@ class SendForgotPasswordMailUseCase {
 
     const variables = {
       name: user.name,
-      link: `${process.env.RESET_PASSWORD_URL}${token}`,
+      link: `${process.env.APP_API_URL}/password/reset?token=${token}`,
     };
 
     await this.mailProvider.sendMail(
