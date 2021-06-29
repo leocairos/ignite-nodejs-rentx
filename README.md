@@ -487,4 +487,4 @@ Feito com ❤️ por [Leonardo Cairo](https://www.linkedin.com/in/leonardo-cairo
   - [x] Chapter V - Class 1 - Correçao dos Testes 09min26s
 
 **to fix**
-  - [ ] Test controller with envTest
+  - [X] Test controller with envTest
