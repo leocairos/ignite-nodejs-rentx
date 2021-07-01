@@ -368,6 +368,8 @@ Feito isso, para verificar se está realmente funcionando basta reabrir qualquer
 
 * Commands by docker-compose.yml file:
   * Create and run app: docker-compose up
+  * Create and run especific service: docker-compose up Service_Name
+    * docker-compose up database
   * Force re Create and run app: docker-compose up --force-recreate
   * Create and run app in background mode: docker-compose up -d
   * Run app only: docker-compose start
