@@ -15,6 +15,11 @@ services:
     volumes:
       - pgdata:/data/postgres
 
+  redis:
+    image: redis:apine
+    ports:
+      6379:6379
+
   app:
     build: .
     container_name: rentx
