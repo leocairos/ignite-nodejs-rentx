@@ -479,6 +479,107 @@ Requirements (RF|RNF|RN) >> Entity >> IRepository >> RepositoryInMemory
 1. CreateRentalUseCase.ts (basic struct)
 2. CreateRentalUseCase.spec.ts (basic struct)
 
+---
+### Deploy AWS by Ignite🚀
+
+- Add user deploy: $ sudo adduser deploy
+- Add root access to user deploy: $ sudo usermod -aG sudo deploy
+- To user deploy: $ sudo su - deploy
+- Configure access to user deploy:
+  - In deploy user home folder: $ mkdir .ssh
+  - Change access mode: $ chmod 700 .ssh/
+  - Access folder .ssh: $ cd .ssh/
+  - Create authorized_keys file: $ touch authorized_keys
+  - Generate keys (public and private) in local computer
+    * In Windows by Git Bash, open Git Bash terminal and type  or ssh-keygen
+    * https://www.notion.so/SSH-no-Windows-c6091c09aeca4555b0bbe00447a8ebd8#89d4de0c803149d6841b292928d7ff9b
+  - Copy public key content to authorized_keys: $ vi authorized_keys
+  - Change access mode to authorized_keys: $ chmod 600 authorized_keys
+
+- Update serve environment (Ubuntu Server): $ sudo apt update
+
+- Install Node JS:
+  - By https://github.com/nodesource/distributions/blob/master/README.md
+  - **Using Ubuntu**
+    * curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+    * sudo apt-get install -y nodejs
+  - **Using Debian**, as root
+    * curl -fsSL https://deb.nodesource.com/setup_14.x | bash -
+    * apt-get install -y nodejs
+  - Check node installed version: $ node -v
+  - Check npm installed version: $ npm -v
+
+- Install Docker
+  - Uninstall old versions: $ sudo apt-get remove docker docker-engine docker.io containerd runc
+  - Set up the repository:
+    * $ sudo apt-get update
+    * $ sudo apt-get install \
+      apt-transport-https \
+      ca-certificates \
+      curl \
+      gnupg \
+      lsb-release
+  - Add Docker’s official GPG key: $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+  - set up the stable repository: $ echo \ "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  - Install Docker Engine
+    * $ sudo apt-get update
+    * sudo apt-get install docker-ce docker-ce-cli containerd.io
+  - Check Docker installed: $ docker -v
+  - Install Compose on Linux systems
+    * $ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    * $ sudo chmod +x /usr/local/bin/docker-compose
+  - Check Docker Compose installed: $ docker-compose -v
+  - Grant docker permission:
+    * $ sudo groupadd docker
+    * $ sudo usermod -aG docker $USER
+    * Reconnect to policy effect
+
+- Yarn install
+  - $ sudo npm install --global yarn
+  - Check yarn installed: $ yarn -v
+
+- Reverse Proxy (by nginx)
+  - $ sudo apt install nginx
+  - Authorize access on HTTP and HTTPS port (80 and 443)
+  - $ cd /etc/nginx/sites-available
+  - $ sudo touch xilolims
+  - $ vi xilolims
+  ```script
+    server {
+      listen 80 default_server;
+      listen [::]:80 default_server;
+
+      location / {
+        proxy_pass http://localhost:3530;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade
+      }
+    }
+  ```
+  - Create a symbolic link to xilolims and remove default in sites-enable e sites available:
+    - $ cd /etc/nginx/sites-enable
+    - $ sudo ln -s /etc/nginx/sites-available/xilolims xilolims
+    - $ sudo rm -rf default
+    - $ cd /etc/nginx/sites-available
+    - $ sudo rm -rf default
+  - Restart nginx service: $ sudo service nginx restart
+
+- Configure hosting zone in AWS (Route 53) and Add register A (In Router 53 and your hosting) with URL DNS and IP Server API:
+  - Network configuration for access via DNS instead of an IP address
+  - Check in www.whatsmydns.net
+
+- Configure access HTTPS (certBot)
+  - $ sudo snap install core; sudo snap refresh core
+  - $ sudo snap install --classic certbot
+  - $ sudo certbot --nginx
+  - $ sudo certbot renew --dry-run
+  - Restart nginx service: $ sudo service nginx restart
+
+
 ## 📝 Licença
 
 Este projeto esta sob a licença MIT.
@@ -490,3 +591,5 @@ Feito com ❤️ por [Leonardo Cairo](https://www.linkedin.com/in/leonardo-cairo
 
 **to fix**
   - [ ] ...
+
+
